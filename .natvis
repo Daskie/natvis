@@ -10,4 +10,34 @@
             </ArrayItems>
         </Expand>
     </Type>
+    <Type Name="qc::Pool&lt;*&gt;::UnqT&lt;*&gt;">
+        <DisplayString Condition="_chunk">{_chunk->val}</DisplayString>
+        <DisplayString>NULL</DisplayString>
+        <Expand>
+            <Item Name="val" Condition="_chunk">_chunk->val</Item>
+        </Expand>
+    </Type>
+    <Type Name="qc::Pool&lt;*&gt;::ShrT&lt;*&gt;">
+        <DisplayString Condition="_chunk">{_chunk->val}</DisplayString>
+        <DisplayString>NULL</DisplayString>
+        <Expand>
+            <Item Name="val" Condition="_chunk">_chunk->val</Item>
+            <Item Name="refN" Condition="_chunk">_chunk->refN</Item>
+        </Expand>
+    </Type>
+    <Type Name="qc::Arena::Unq&lt;*&gt;">
+        <DisplayString Condition="_ptr">{*_ptr}</DisplayString>
+        <DisplayString>NULL</DisplayString>
+        <Expand>
+            <Item Name="val" Condition="_ptr">*_ptr</Item>
+        </Expand>
+    </Type>
+    <Type Name="qc::Arena::Shr&lt;*&gt;">
+        <DisplayString Condition="_ptr">{*_ptr}</DisplayString>
+        <DisplayString>NULL</DisplayString>
+        <Expand>
+            <Item Name="val" Condition="_ptr">*_ptr</Item>
+            <Item Name="refN" Condition="_ptr">_refN()</Item>
+        </Expand>
+    </Type>
 </AutoVisualizer>
